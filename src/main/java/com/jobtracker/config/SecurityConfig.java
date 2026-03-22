@@ -78,7 +78,7 @@ public class SecurityConfig {
         config.setAllowedOrigins(List.of(
             "http://localhost:5173",
             "http://localhost:3000",
-            "https://your-app.vercel.app"   // ← update after deploying frontend
+            "https://job-tracker-frontend-ten-sigma.vercel.app" 
         ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
