@@ -74,13 +74,6 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        // Allow React dev server + production Vercel URL
-//        config.setAllowedOrigins(List.of(
-//            "http://localhost:5173",
-//            "http://localhost:3000",
-//            //"https://job-tracker-frontend-ten-sigma.vercel.app" 
-//            
-//        ));
         config.setAllowedOriginPatterns(List.of(
         	    "http://localhost:5173",
         	    "http://localhost:3000",
@@ -88,7 +81,7 @@ public class SecurityConfig {
         	));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
-        config.setAllowCredentials(true);
+        //config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
